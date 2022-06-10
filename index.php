@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <form action="graf.php" method="POST">
+    <form action="index.php" method="POST">
       <table class="table">
           <thead class="thead">
               <tr>
@@ -51,12 +51,12 @@
                     $newStudent = [];
                     array_push($newStudent, $_POST["name"], $_POST["group"]);
                     array_push($students, $newStudent);
-                    header('Location: graf.php');
+                    header('Location: index.php');
                   }
                   if (isset($_POST["delete"])) {
                     //unset($students[$_POST["delete"]]);
                     array_splice ($students, $_POST["delete"], 1);
-                    header('Location: graf.php');
+                    header('Location: index.php');
                   }
                   $countDays = 5;
                   $schedule1Start =9;
